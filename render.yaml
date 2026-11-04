@@ -1,0 +1,73 @@
+# Render Blueprint. Render dashboard > New > Blueprint > select this repo.
+# Secrets use sync:false, so Render asks for them in the dashboard (never stored in git).
+services:
+  - type: web
+    name: growzone-whatsapp-agent
+    runtime: node
+    plan: starter # ~$7/month. The free plan sleeps, so webhooks get delayed or missed.
+    region: singapore
+    # This file assumes whatsapp-agent/ is the root of its own Git repo.
+    # If you push it inside a bigger repo instead: move render.yaml to that repo's root
+    # and add:  rootDir: whatsapp-agent
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    disk:
+      name: data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: DATA_DIR
+        value: /var/data
+      - key: CLAUDE_MODEL
+        value: claude-sonnet-5-5
+      - key: CLAUDE_EFFORT
+        value: low
+      - key: CLAUDE_FALLBACKS
+        value: "on"
+      - key: GOOGLE_CALENDAR_ID
+        value: digitalagency315@gmail.com
+      - key: WORKING_DAYS
+        value: "1,2,3,4,5"
+      - key: UPI_NAME
+        value: GrowZone Media
+      - key: COURSE_PRICE
+        value: "999"
+      - key: WHATSAPP_ALERT_TEMPLATE_LANG
+        value: en
+      # ---- secrets: fill in the Render dashboard ----
+      - key: WHATSAPP_TOKEN
+        sync: false
+      - key: WHATSAPP_PHONE_NUMBER_ID
+        sync: false
+      - key: WHATSAPP_VERIFY_TOKEN
+        sync: false
+      - key: WHATSAPP_APP_SECRET
+        sync: false
+      - key: WHATSAPP_ALERT_TEMPLATE
+        sync: false
+      - key: OWNER_NUMBER
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: GOOGLE_SERVICE_ACCOUNT_JSON
+        sync: false
+      - key: UPI_ID
+        sync: false
+      - key: COURSE_ACCESS_MESSAGE
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: SMTP_FROM
+        sync: false
+      - key: ALERT_EMAIL_TO
+        sync: false
