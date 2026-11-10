@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Esoteric Healer | Quantum Healing Hypnosis with Marina, Canungra QLD</title>
+<meta name="description" content="Quantum Healing Hypnosis (QHHT) sessions with Marina, a certified hypnotherapist trained in the teachings of the late Dolores Cannon. Rooms in the Hinterland at Canungra QLD, or in your own space within 20 km. Sessions also available in Greek.">
+<!--
+  Redesign concept by GrowZone Media for My Esoteric Healer (myesoterichealer.com).
+  All facts come from the current site (home, testimonials, blog, book-online pages).
+  Anything still needed from the client is marked [CLIENT TO CONFIRM: ...] (class="placeholder").
+  Palette: dark-luxe (midnight + soft gold + violet). The current site's brand colours were not confirmed.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B0A14;          /* page ground: midnight */
+  --navy-mid:#13111F;      /* section ground */
+  --navy-deep:#07060D;
+  --teal:#D9BC7A;          /* accent: soft gold (kept as --teal for the skill's token names) */
+  --gold:#D9BC7A;
+  --gold-soft:#EBD8A8;
+  --violet:#9C8BE0;
+  --violet-deep:#4B3C8F;
+  --teal-glow:rgba(217,188,122,.14);
+  --off-white:#F4EFE6;
+  --text-muted:rgba(244,239,230,.72);
+  --text-faint:rgba(244,239,230,.55);
+  --card-bg:rgba(255,255,255,.035);
+  --card-border:rgba(217,188,122,.18);
+  --serif:"Cormorant Garamond","Cormorant",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --pad-x:24px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;background:var(--navy);color:var(--off-white);font-family:var(--sans);font-size:17px;line-height:1.65;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.container{max-width:1200px;margin:0 auto;padding:0 var(--pad-x)}
+.eyebrow{display:inline-block;font-size:13px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(38px,5.2vw,60px)}
+h2 em,h1 em{font-style:italic;color:var(--gold-soft)}
+p{margin:0}
+.lead{font-size:clamp(17px,1.4vw,19px);color:var(--text-muted);max-width:640px}
+.section{padding:120px 0;position:relative}
+.section-head{max-width:760px;margin-bottom:56px}
+.section-head .eyebrow{margin-bottom:18px}
+.section-head h2{margin-bottom:20px}
+.placeholder{display:inline-block;font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.02em;line-height:1.45;color:#1A1405;background:#F2D27A;border:1px dashed #8A6A12;border-radius:6px;padding:4px 9px}
+
+/* ---------- Buttons ---------- */
+.btn-primary,.btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-size:17px;font-weight:500;text-decoration:none;border-radius:999px;padding:16px 30px;transition:transform .3s ease,filter .3s ease,box-shadow .3s ease,background .3s ease,border-color .3s ease;cursor:pointer;min-height:48px}
+.btn-primary{color:#17120A;background:linear-gradient(135deg,#F0DDA9 0%,#D9BC7A 45%,#B8954D 100%);box-shadow:0 10px 30px -10px rgba(217,188,122,.55),inset 0 1px 0 rgba(255,255,255,.5)}
+.btn-primary:hover,.btn-primary:focus-visible{transform:translateY(-3px);filter:brightness(1.08);box-shadow:0 18px 40px -12px rgba(217,188,122,.7),inset 0 1px 0 rgba(255,255,255,.5)}
+.btn-ghost{color:var(--off-white);border:1px solid rgba(244,239,230,.25);background:rgba(255,255,255,.03)}
+.btn-ghost:hover,.btn-ghost:focus-visible{border-color:var(--gold);transform:translateY(-3px)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold-soft);outline-offset:3px}
+
+/* ---------- Nav ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .4s ease,backdrop-filter .4s ease,border-color .4s ease;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(11,10,20,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:rgba(217,188,122,.12)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--serif);font-size:23px;letter-spacing:.01em;white-space:nowrap}
+.brand-mark{width:30px;height:30px;flex:none}
+.nav-links{display:flex;align-items:center;gap:30px;font-size:15px}
+.nav-links a{text-decoration:none;color:var(--text-muted);transition:color .25s}
+.nav-links a:hover{color:var(--off-white)}
+.nav .btn-primary{padding:11px 22px;font-size:15px;min-height:44px;color:#17120A}
+.nav-links a.btn-primary:hover{color:#17120A}
+
+/* ---------- Hero ---------- */
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 0 90px;perspective:1200px;
+  background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(75,60,143,.42) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 15% 85%,rgba(217,188,122,.10) 0%,transparent 60%),var(--navy)}
+.stars{position:absolute;inset:0;pointer-events:none;opacity:.9}
+.stars span{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;opacity:.5;animation:twinkle 4s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:.15}50%{opacity:.85}}
+.hero-shapes-back,.hero-shapes-mid{position:absolute;inset:0;pointer-events:none}
+.blur-orb{position:absolute;border-radius:50%;filter:blur(70px)}
+.shape-a{width:520px;height:520px;right:-120px;top:-80px;background:rgba(156,139,224,.28);animation:floatA 14s ease-in-out infinite}
+.shape-b{width:420px;height:420px;left:-160px;bottom:-140px;background:rgba(217,188,122,.16);animation:floatB 17s ease-in-out infinite}
+.shape-c{width:260px;height:260px;left:38%;top:12%;background:rgba(75,60,143,.30);animation:floatC 11s ease-in-out infinite}
+.spark{position:absolute;border:1px solid rgba(217,188,122,.45);transform:rotate(45deg)}
+.spark-1{width:14px;height:14px;left:8%;top:24%;animation:floatB 9s ease-in-out infinite}
+.spark-2{width:10px;height:10px;right:12%;bottom:18%;animation:floatA 12s ease-in-out infinite}
+.spark-3{width:8px;height:8px;left:46%;bottom:12%;animation:floatC 10s ease-in-out infinite;border-color:rgba(156,139,224,.6)}
+@keyframes floatA{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(20px,-30px) rotate(8deg)}}
+@keyframes floatB{0%,100%{transform:translate(0,0) rotate(45deg)}50%{transform:translate(-24px,18px) rotate(60deg)}}
+@keyframes floatC{0%,100%{transform:translate(0,0) rotate(0)}50%{transform:translate(14px,22px) rotate(-10deg)}}
+
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:40px;align-items:center;position:relative;z-index:2}
+.hero h1{font-size:clamp(46px,6.4vw,82px);margin:22px 0 24px}
+.hero .subtitle{font-size:clamp(17px,1.4vw,19px);color:var(--text-muted);max-width:560px;margin-bottom:36px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:38px;font-size:14px;color:var(--text-faint)}
+.hero-facts span{display:inline-flex;align-items:center;gap:8px}
+.hero-facts span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold)}
+
+/* 3D celestial orb */
+.orb-stage{position:relative;width:100%;max-width:480px;aspect-ratio:1/1;margin:0 auto;perspective:1100px}
+.orb-tilt{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(62deg) rotateZ(-18deg)}
+.ring{position:absolute;inset:0;margin:auto;border-radius:50%;border:1px solid rgba(217,188,122,.55);transform-style:preserve-3d}
+.ring::after{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--gold-soft);box-shadow:0 0 14px 3px rgba(235,216,168,.8);top:-5px;left:50%;margin-left:-4.5px}
+.ring-1{width:100%;height:100%;animation:spin 26s linear infinite}
+.ring-2{width:78%;height:78%;border-color:rgba(156,139,224,.6);animation:spin 19s linear infinite reverse}
+.ring-2::after{background:#CFC4FF;box-shadow:0 0 14px 3px rgba(156,139,224,.9)}
+.ring-3{width:56%;height:56%;border-style:dashed;border-color:rgba(244,239,230,.3);animation:spin 34s linear infinite}
+.ring-3::after{display:none}
+.ring-v{position:absolute;inset:0;margin:auto;width:86%;height:86%;border-radius:50%;border:1px solid rgba(217,188,122,.28);transform:rotateX(90deg);animation:spinY 22s linear infinite}
+@keyframes spin{to{transform:rotateZ(360deg)}}
+@keyframes spinY{from{transform:rotateX(90deg) rotateY(0)}to{transform:rotateX(90deg) rotateY(360deg)}}
+.core{position:absolute;left:50%;top:50%;width:34%;aspect-ratio:1/1;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#FFF6DD 0%,#E9CF92 18%,#9C8BE0 52%,#2C2160 80%,#120E26 100%);
+  box-shadow:0 0 60px 10px rgba(156,139,224,.35),0 0 140px 30px rgba(217,188,122,.15),inset -14px -18px 40px rgba(0,0,0,.45);animation:breathe 7s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.06)}}
+.orb-caption{position:absolute;left:50%;bottom:2%;transform:translateX(-50%);font-family:var(--serif);font-style:italic;font-size:18px;color:var(--text-faint);white-space:nowrap}
+
+.scroll-down{position:absolute;left:50%;bottom:26px;margin-left:-18px;width:36px;height:36px;display:grid;place-items:center;color:var(--text-faint);text-decoration:none;z-index:3;animation:bounce 2s ease-in-out infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+
+/* ---------- Session journey (features) ---------- */
+.features{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-mid) 100%)}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;perspective:1200px}
+.feature-card{position:relative;padding:36px 30px 34px;border-radius:22px;background:linear-gradient(160deg,rgba(255,255,255,.055) 0%,rgba(255,255,255,.015) 100%);border:1px solid var(--card-border);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;transform-style:preserve-3d;will-change:transform}
+.feature-card:hover{transform:translateY(-6px);border-color:var(--teal);box-shadow:0 30px 60px -30px rgba(156,139,224,.45)}
+.feature-card .step{font-family:var(--serif);font-size:56px;line-height:1;color:rgba(217,188,122,.28);position:absolute;right:24px;top:20px}
+.icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--teal-glow);border:1px solid var(--card-border);margin-bottom:24px;transform:translateZ(30px)}
+.icon svg{width:28px;height:28px;stroke:var(--teal);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.feature-card h3{font-size:30px;margin-bottom:6px;transform:translateZ(20px)}
+.feature-card .dur{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:500}
+.feature-card p{font-size:16px;color:var(--text-muted)}
+
+.details{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(217,188,122,.16);border:1px solid rgba(217,188,122,.16);border-radius:20px;overflow:hidden}
+.detail{background:var(--navy-mid);padding:26px 24px}
+.detail .k{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-faint);margin-bottom:8px}
+.detail .v{font-family:var(--serif);font-size:27px;line-height:1.15}
+.detail .s{font-size:14px;color:var(--text-muted);margin-top:6px}
+.policy-note{margin-top:22px;font-size:14px;color:var(--text-faint)}
+
+/* ---------- Pinned timelines ---------- */
+.timelines{background:var(--navy-deep);overflow:hidden}
+.tl-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;min-height:100vh;padding:100px var(--pad-x)}
+.tl-stage{position:relative;height:440px;perspective:1100px}
+.tl-card{position:absolute;inset:0;margin:auto;width:min(100%,380px);height:300px;border-radius:24px;padding:34px 30px;display:flex;flex-direction:column;justify-content:flex-end;border:1px solid rgba(217,188,122,.28);
+  background:radial-gradient(circle at 70% 20%,rgba(156,139,224,.35),transparent 60%),linear-gradient(170deg,#1C1834 0%,#0E0C1A 100%);box-shadow:0 40px 80px -30px rgba(0,0,0,.8);transform-origin:50% 120%;backface-visibility:hidden}
+.tl-card .n{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:20px;margin-bottom:6px}
+.tl-card h3{font-size:38px;margin-bottom:10px}
+.tl-card p{color:var(--text-muted);font-size:16px}
+.tl-card .glyph{position:absolute;top:28px;right:28px;width:64px;height:64px;opacity:.9}
+.tl-list{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:12px}
+.tl-list li{display:flex;gap:12px;align-items:baseline;color:var(--text-muted)}
+.tl-list li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--violet);transform:translateY(-2px)}
+
+/* ---------- About ---------- */
+.about{background:var(--navy)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.portrait{position:relative;aspect-ratio:4/5;border-radius:200px 200px 24px 24px;border:1px solid rgba(217,188,122,.3);background:radial-gradient(circle at 50% 30%,rgba(156,139,224,.28),transparent 65%),linear-gradient(180deg,#1A1630,#0D0B18);display:grid;place-items:center;padding:28px;text-align:center;transform-style:preserve-3d;transition:transform .2s ease-out;max-width:440px;width:100%;margin:0 auto}
+.portrait::before{content:"";position:absolute;inset:14px;border-radius:186px 186px 14px 14px;border:1px solid rgba(217,188,122,.14);pointer-events:none}
+.about-copy .eyebrow{margin-bottom:18px}
+.about-copy h2{margin-bottom:24px}
+.about-copy p{color:var(--text-muted);margin-bottom:18px;max-width:600px}
+.creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chip{font-size:14px;padding:9px 16px;border-radius:999px;border:1px solid rgba(217,188,122,.3);background:rgba(217,188,122,.06);color:var(--off-white)}
+
+/* ---------- Testimonials ---------- */
+.testimonials{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-mid) 100%)}
+.t-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;perspective:1400px}
+.t-card{position:relative;padding:38px 34px 32px;border-radius:22px;border:1px solid var(--card-border);background:var(--card-bg);transform-style:preserve-3d;transition:transform .2s ease-out,border-color .3s}
+.t-card:hover{border-color:rgba(217,188,122,.45)}
+.t-card .q{font-family:var(--serif);font-size:72px;line-height:.6;color:var(--gold);opacity:.6;display:block;height:30px}
+.t-card blockquote{margin:0 0 22px;font-family:var(--serif);font-size:clamp(20px,1.8vw,24px);line-height:1.4;color:var(--off-white)}
+.t-card cite{font-style:normal;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.t-more{margin-top:34px;font-size:15px;color:var(--text-muted)}
+.t-more a{color:var(--gold-soft)}
+
+/* ---------- Where ---------- */
+.where{background:var(--navy-mid)}
+.where-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.where-card{padding:38px 34px;border-radius:22px;border:1px solid var(--card-border);background:linear-gradient(160deg,rgba(156,139,224,.08),rgba(255,255,255,.01))}
+.where-card h3{font-size:32px;margin:14px 0 12px}
+.where-card p{color:var(--text-muted);font-size:16px}
+.where-card ul{margin:16px 0 0;padding-left:20px;color:var(--text-muted);font-size:16px}
+.where-card li{margin-bottom:6px}
+.care{margin-top:40px;padding:26px 28px;border-radius:18px;border:1px solid rgba(156,139,224,.3);background:rgba(156,139,224,.07);display:flex;gap:18px;align-items:flex-start}
+.care svg{flex:none;width:26px;height:26px;stroke:var(--violet);fill:none;stroke-width:1.6;margin-top:2px}
+.care p{font-size:15px;color:var(--text-muted)}
+.care strong{color:var(--off-white);font-weight:600}
+
+/* ---------- Closing CTA ---------- */
+.closing-cta{background:var(--navy-mid);padding:120px 24px;text-align:center;position:relative;overflow:hidden;border-top:1px solid rgba(217,188,122,.1)}
+.closing-cta::before{content:"";position:absolute;left:50%;top:50%;width:900px;height:900px;max-width:180vw;transform:translate(-50%,-50%);background:radial-gradient(circle,var(--teal-glow) 0%,transparent 70%);pointer-events:none}
+.closing-cta .inner{position:relative;max-width:760px;margin:0 auto}
+.closing-cta h2{font-size:clamp(40px,5.4vw,62px);margin:18px 0 20px}
+.closing-cta .lead{margin:0 auto 38px}
+.cta-glow{position:relative;display:inline-block}
+.cta-glow::before{content:"";position:absolute;inset:-60px -90px;background:radial-gradient(circle,var(--teal-glow) 0%,transparent 70%);z-index:-1}
+.contact-row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 34px;margin-top:44px;font-size:16px;color:var(--text-muted)}
+.contact-row a{text-decoration:none;color:var(--off-white);border-bottom:1px solid rgba(217,188,122,.4);word-break:break-word}
+.contact-row a:hover{border-bottom-color:var(--gold)}
+.contact-row .lbl{display:block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-faint);margin-bottom:4px}
+
+footer{background:var(--navy-deep);padding:44px 0 calc(44px + env(safe-area-inset-bottom,0px));font-size:14px;color:var(--text-faint)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center}
+.foot nav{display:flex;flex-wrap:wrap;gap:18px}
+.foot a{text-decoration:none;color:var(--text-muted)}
+.foot a:hover{color:var(--off-white)}
+.disclaimer{margin-top:22px;font-size:13px;line-height:1.6;color:var(--text-faint);max-width:860px}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1040px){
+  .details{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:900px){
+  .features-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-grid{grid-template-columns:1fr;gap:20px}
+  .orb-stage{max-width:340px;order:-1}
+  .tl-wrap{grid-template-columns:1fr;gap:40px;min-height:auto;padding:96px var(--pad-x)}
+  .tl-stage{height:auto;display:grid;gap:16px}
+  .tl-card{position:relative;inset:auto;margin:0;width:100%;height:auto;min-height:210px}
+  .about-grid{grid-template-columns:1fr;gap:44px}
+  .t-grid,.where-grid{grid-template-columns:1fr}
+  .nav-links a:not(.btn-primary){display:none}
+  .section{padding:96px 0}
+}
+@media (max-width:580px){
+  :root{--pad-x:18px}
+  body{font-size:16px}
+  .features-grid{grid-template-columns:1fr}
+  .details{grid-template-columns:1fr}
+  .hero{padding:96px 0 80px}
+  .hero h1{font-size:44px}
+  .orb-stage{max-width:250px}
+  .orb-caption{font-size:15px}
+  .hero-ctas .btn-primary,.hero-ctas .btn-ghost{width:100%}
+  .brand{font-size:19px;gap:9px}
+  .brand-mark{width:26px;height:26px}
+  .nav .btn-primary{padding:10px 16px;font-size:14px}
+  .section{padding:80px 0}
+  .closing-cta{padding:88px 18px}
+  .feature-card,.t-card,.where-card{padding:30px 22px}
+  .tl-card h3{font-size:32px}
+  .tl-card{padding:28px 24px}
+  .care{flex-direction:column;gap:10px}
+  .contact-row{flex-direction:column;align-items:center}
+}
+@media (max-width:360px){
+  .brand-text{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top" aria-label="My Esoteric Healer, back to top">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="none" stroke="#D9BC7A" stroke-width="1"/><ellipse cx="16" cy="16" rx="14.5" ry="5.5" fill="none" stroke="#9C8BE0" stroke-width="1"/><circle cx="16" cy="16" r="4" fill="#EBD8A8"/></svg>
+      <span class="brand-text">My Esoteric Healer</span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#session">The session</a>
+      <a href="#about">About Marina</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+      <a class="btn-primary" href="https://www.myesoterichealer.com/book-online">Book online</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="stars" id="stars" aria-hidden="true"></div>
+  <div class="hero-shapes-back" aria-hidden="true">
+    <div class="blur-orb shape-a"></div>
+    <div class="blur-orb shape-b"></div>
+    <div class="blur-orb shape-c"></div>
+  </div>
+  <div class="hero-shapes-mid" aria-hidden="true">
+    <div class="spark spark-1"></div>
+    <div class="spark spark-2"></div>
+    <div class="spark spark-3"></div>
+  </div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Quantum Healing Hypnosis &middot; Canungra, QLD</span>
+      <h1 id="hero-title">A quiet space to meet your <em>Higher Self</em></h1>
+      <p class="subtitle">Quantum Healing Hypnosis sessions with Marina, a certified hypnotherapist under the teachings of the late Dolores Cannon. In her rooms in the Hinterland at Canungra, or in your own space.</p>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="https://www.myesoterichealer.com/book-online">Book your session
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn-ghost" href="#session">How a session works</a>
+      </div>
+      <div class="hero-facts">
+        <span>Around five hours, one session</span>
+        <span>Recording included</span>
+        <span>Sessions in English or Greek</span>
+      </div>
+    </div>
+
+    <div class="orb-stage" id="orb" aria-hidden="true">
+      <div class="orb-tilt">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+        <div class="ring-v"></div>
+      </div>
+      <div class="core"></div>
+      <div class="orb-caption">past &middot; present &middot; future</div>
+    </div>
+  </div>
+
+  <a class="scroll-down" href="#session" aria-label="Scroll to the session">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+  </a>
+</section>
+
+<!-- ============ SESSION (features) ============ -->
+<section class="section features" id="session" aria-labelledby="session-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The session</span>
+      <h2 id="session-title">One unhurried session, <em>in three parts</em></h2>
+      <p class="lead">A Quantum Healing Hypnosis session may take around five hours. The intention is to look at your main concerns in depth, all within a single session.</p>
+    </div>
+
+    <div class="features-grid">
+      <article class="feature-card">
+        <span class="step" aria-hidden="true">I</span>
+        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 11h6M9 14h4"/></svg></div>
+        <h3>Interview</h3>
+        <div class="dur">1 to 2 hours</div>
+        <p>You and Marina talk through your main concerns in depth, so the session is shaped around what matters most to you.</p>
+      </article>
+      <article class="feature-card">
+        <span class="step" aria-hidden="true">II</span>
+        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/><path d="M17 3v3M15.5 4.5h3"/></svg></div>
+        <h3>Hypnosis</h3>
+        <div class="dur">1 to 2 hours</div>
+        <p>A guided journey to an alternate time, such as earlier in this life, a past life or a future life, to contact the Higher Self or Subconscious Mind.</p>
+      </article>
+      <article class="feature-card">
+        <span class="step" aria-hidden="true">III</span>
+        <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></div>
+        <h3>Debrief</h3>
+        <div class="dur">About 1 hour</div>
+        <p>You talk through the session together while you gently return to your normal waking state.</p>
+      </article>
+    </div>
+
+    <div class="details" role="list">
+      <div class="detail" role="listitem"><div class="k">Length</div><div class="v">About 5 hours</div><div class="s">Listed as a 5 hr booking</div></div>
+      <div class="detail" role="listitem"><div class="k">Investment</div><div class="v">A$350</div><div class="s">Per session, as listed on Book Online</div></div>
+      <div class="detail" role="listitem"><div class="k">Recording</div><div class="v">Yours to keep</div><div class="s">The hypnosis portion is recorded and given to you at the end, or record on your own device</div></div>
+      <div class="detail" role="listitem"><div class="k">Language</div><div class="v">English or Greek</div><div class="s">Marina is fluent in Greek and can hold the whole session in Greek</div></div>
+    </div>
+    <p class="policy-note">Please don't listen to your recording while driving, as you can enter a Theta state. &nbsp;<span class="placeholder">[CLIENT TO CONFIRM: cancellation and rescheduling policy]</span></p>
+  </div>
+</section>
+
+<!-- ============ TIMELINES (pinned 3D scroll) ============ -->
+<section class="timelines" id="timelines" aria-labelledby="tl-title">
+  <div class="container tl-wrap" id="tl-pin">
+    <div class="tl-copy">
+      <span class="eyebrow">Where the journey can go</span>
+      <h2 id="tl-title" style="margin:18px 0 20px">Travel to an <em>alternate time</em></h2>
+      <p class="lead">During hypnosis you may visit another point in time to contact your Higher Self, or Subconscious Mind. Every session follows its own path.</p>
+      <ul class="tl-list">
+        <li>Earlier in this life</li>
+        <li>A past life</li>
+        <li>A future life</li>
+      </ul>
+    </div>
+    <div class="tl-stage" aria-hidden="true">
+      <div class="tl-card" data-i="0">
+        <svg class="glyph" viewBox="0 0 64 64" fill="none" stroke="#D9BC7A" stroke-width="1.2"><circle cx="32" cy="32" r="22"/><path d="M32 18v14l9 6"/></svg>
+        <div class="n">I.</div><h3>Earlier in this life</h3><p>Returning to moments that shaped who you are today.</p>
+      </div>
+      <div class="tl-card" data-i="1">
+        <svg class="glyph" viewBox="0 0 64 64" fill="none" stroke="#9C8BE0" stroke-width="1.2"><path d="M32 8l6 18h18l-14 11 5 18-15-11-15 11 5-18L8 26h18z"/></svg>
+        <div class="n">II.</div><h3>A past life</h3><p>Exploring lifetimes before this one, and the themes that run through them.</p>
+      </div>
+      <div class="tl-card" data-i="2">
+        <svg class="glyph" viewBox="0 0 64 64" fill="none" stroke="#EBD8A8" stroke-width="1.2"><circle cx="32" cy="32" r="8"/><circle cx="32" cy="32" r="18"/><circle cx="32" cy="32" r="27" stroke-dasharray="3 5"/></svg>
+        <div class="n">III.</div><h3>A future life</h3><p>Looking ahead, with your Higher Self as the guide.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about" id="about" aria-labelledby="about-title">
+  <div class="container about-grid">
+    <div class="portrait" id="portrait">
+      <span class="placeholder">[CLIENT TO CONFIRM: portrait photo of Marina for this frame]</span>
+    </div>
+    <div class="about-copy">
+      <span class="eyebrow">About Marina</span>
+      <h2 id="about-title">Safety and <em>personalised care</em>, first</h2>
+      <p>Marina is a certified hypnotherapist under the teachings of the late Dolores Cannon, with a few years of experience. She guides each Quantum Healing Hypnosis session herself, from the first conversation to the debrief.</p>
+      <p>Clients describe her as friendly and professional, with the ability to hold a safe, relaxing and positive space.</p>
+      <p><span class="placeholder">[CLIENT TO CONFIRM: a short personal story from Marina, e.g. how she came to this work]</span></p>
+      <div class="creds">
+        <span class="chip">Certified hypnotherapist</span>
+        <span class="chip">Trained in the teachings of Dolores Cannon</span>
+        <span class="chip">Fluent in Greek</span>
+        <span class="chip">Canungra, QLD</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS (verbatim from /testimonials) ============ -->
+<section class="section testimonials" id="testimonials" aria-labelledby="t-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Kind words</span>
+      <h2 id="t-title">In their <em>own words</em></h2>
+    </div>
+    <div class="t-grid">
+      <figure class="t-card" style="margin:0">
+        <span class="q" aria-hidden="true">&ldquo;</span>
+        <blockquote>My intention was to explore my past, present and future lifetimes. During my session I journeyed through multiple timelines and was excited to discover a common theme occurring throughout. I came out of it with valuable insights into my way of being, my traits and interests, as well as my soul's purpose in this current lifetime.</blockquote>
+        <figcaption><cite>Stella Todan</cite></figcaption>
+      </figure>
+      <figure class="t-card" style="margin:0">
+        <span class="q" aria-hidden="true">&ldquo;</span>
+        <blockquote>I highly recommend Marina and her healing services. &hellip; She held a safe space for me to openly talk about my blocks and several pressing issues which she guided me through comfortably and with ease. I woke feeling refreshed and lighter.</blockquote>
+        <figcaption><cite>Serena Geddes</cite></figcaption>
+      </figure>
+      <figure class="t-card" style="margin:0">
+        <span class="q" aria-hidden="true">&ldquo;</span>
+        <blockquote>Marina's hypnotherapy sessions have been truly life-changing, helping me overcome deep-seated fears and find inner peace.</blockquote>
+        <figcaption><cite>Client</cite></figcaption>
+      </figure>
+      <figure class="t-card" style="margin:0">
+        <span class="q" aria-hidden="true">&ldquo;</span>
+        <blockquote>&hellip; highly recommend Marina for hypnotherapy. She is friendly and professional and has the ability to hold a safe, relaxing and positive space.</blockquote>
+        <figcaption><cite>Client</cite></figcaption>
+      </figure>
+    </div>
+    <p class="t-more">Read more on the <a href="https://www.myesoterichealer.com/testimonials">testimonials page</a>. Individual experiences vary.</p>
+  </div>
+</section>
+
+<!-- ============ WHERE ============ -->
+<section class="section where" id="where" aria-labelledby="where-title">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Where we meet</span>
+      <h2 id="where-title">Her rooms, <em>or your own space</em></h2>
+      <p class="lead">Choose the setting where you feel most at ease.</p>
+    </div>
+    <div class="where-grid">
+      <div class="where-card">
+        <span class="eyebrow">In the Hinterland</span>
+        <h3>Marina's rooms, Canungra</h3>
+        <p>A tranquil environment in the Hinterland at Canungra QLD 4275.</p>
+      </div>
+      <div class="where-card">
+        <span class="eyebrow">Mobile sessions</span>
+        <h3>Marina comes to you</h3>
+        <p>Marina will travel within a 20 km radius. <span class="placeholder">[CLIENT TO CONFIRM: is the 20 km radius measured from Canungra?]</span></p>
+        <ul>
+          <li>A quiet room that can be darkened</li>
+          <li>Left uninterrupted for at least two hours</li>
+        </ul>
+      </div>
+    </div>
+    <div class="care" role="note">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M12 8v5M12 16h.01"/></svg>
+      <p><strong>Complementary, not a substitute for medical care.</strong> Hypnotherapy is a complementary practice. It does not diagnose, treat or cure any condition, and it is not a substitute for advice or treatment from your doctor or mental health professional. Please keep seeing them for any health concerns.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING CTA ============ -->
+<section class="closing-cta" id="contact" aria-labelledby="cta-title">
+  <div class="inner">
+    <span class="eyebrow">Begin your journey</span>
+    <h2 id="cta-title">When you feel ready, <em>Marina is here</em></h2>
+    <p class="lead">Book your Quantum Healing Hypnosis session online, or reach out first with any questions.</p>
+    <div class="cta-glow">
+      <a class="btn-primary" href="https://www.myesoterichealer.com/book-online">Book online</a>
+    </div>
+    <div class="contact-row">
+      <div><span class="lbl">Phone</span><a href="tel:0431964308">0431 964 308</a></div>
+      <div><span class="lbl">Email</span><a href="mailto:marinalezos@protonmail.com">marinalezos@protonmail.com</a></div>
+      <div><span class="lbl">Location</span>Canungra QLD 4275, Australia</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div>&copy; <span id="yr">2026</span> My Esoteric Healer &middot; myesoterichealer.com</div>
+      <nav aria-label="Footer">
+        <a href="https://www.myesoterichealer.com/book-online">Book Online</a>
+        <a href="https://www.myesoterichealer.com/testimonials">Testimonials</a>
+        <a href="https://www.myesoterichealer.com/blog">Blog</a>
+        <span class="placeholder">[CLIENT TO CONFIRM: social media links, if any]</span>
+      </nav>
+    </div>
+    <p class="disclaimer">Hypnotherapy and Quantum Healing Hypnosis are complementary practices and are not a substitute for medical or psychological care. Results and experiences differ from person to person.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  // Star field (decorative)
+  var stars=document.getElementById("stars");
+  for(var i=0;i<70;i++){
+    var s=document.createElement("span");
+    s.style.left=(Math.random()*100)+"%";
+    s.style.top=(Math.random()*100)+"%";
+    s.style.animationDelay=(Math.random()*4)+"s";
+    var sz=Math.random()<.15?3:(Math.random()<.5?2:1);
+    s.style.width=s.style.height=sz+"px";
+    stars.appendChild(s);
+  }
+
+  // Nav background on scroll
+  var nav=document.getElementById("nav");
+  function onScroll(){nav.classList.toggle("scrolled",window.scrollY>30)}
+  window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+
+  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(typeof gsap==="undefined"||reduce){return;} // page stays fully visible without GSAP
+  gsap.registerPlugin(ScrollTrigger);
+
+  // 1. Initial states first (prevents FOUC)
+  gsap.set([".hero .eyebrow",".hero h1",".hero .subtitle",".hero-ctas",".hero-facts",".scroll-down"],{opacity:0,y:30});
+  gsap.set("#orb",{opacity:0,scale:.85,rotateY:-25});
+  gsap.set(".feature-card",{opacity:0,y:55,rotateX:18});
+  gsap.set(".t-card",{opacity:0,y:40,rotateY:-8});
+  gsap.set([".section-head",".details",".where-card",".care",".about-copy",".portrait"],{opacity:0,y:40});
+
+  // Hero entrance
+  var tl=gsap.timeline({defaults:{ease:"power3.out"}});
+  tl.to(".hero .eyebrow",{opacity:1,y:0,duration:.6})
+    .to(".hero h1",{opacity:1,y:0,duration:.9},"-=.3")
+    .to("#orb",{opacity:1,scale:1,rotateY:0,duration:1.4,ease:"power2.out"},"-=.8")
+    .to(".hero .subtitle",{opacity:1,y:0,duration:.6},"-=1.1")
+    .to(".hero-ctas",{opacity:1,y:0,duration:.5},"-=.8")
+    .to(".hero-facts",{opacity:1,y:0,duration:.5},"-=.5")
+    .to(".scroll-down",{opacity:1,y:0,duration:.4},"-=.2");
+
+  // 2. Mouse parallax (pointer devices only)
+  var hero=document.querySelector(".hero");
+  if(window.matchMedia("(hover: hover) and (pointer: fine)").matches){
+    hero.addEventListener("mousemove",function(e){
+      var x=(e.clientX/window.innerWidth-.5)*2, y=(e.clientY/window.innerHeight-.5)*2;
+      gsap.to(".hero-shapes-back",{x:x*45,y:y*22,duration:.8});
+      gsap.to(".hero-shapes-mid",{x:x*22,y:y*11,duration:.8});
+      gsap.to(".hero-copy",{x:x*8,y:y*5,duration:.8});
+      gsap.to("#orb",{rotateY:x*14,rotateX:-y*10,x:x*-14,y:y*-8,duration:1});
+    });
+    // 3D tilt on cards
+    document.querySelectorAll(".t-card,.portrait").forEach(function(el){
+      el.addEventListener("mousemove",function(e){
+        var r=el.getBoundingClientRect(),px=(e.clientX-r.left)/r.width-.5,py=(e.clientY-r.top)/r.height-.5;
+        gsap.to(el,{rotateY:px*10,rotateX:-py*10,transformPerspective:900,duration:.4});
+      });
+      el.addEventListener("mouseleave",function(){gsap.to(el,{rotateY:0,rotateX:0,duration:.6})});
+    });
+  }
+
+  // Hero depth on scroll
+  gsap.to(".hero-grid",{yPercent:18,opacity:.25,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:true}});
+
+  // 3. Scroll reveals
+  ScrollTrigger.batch(".feature-card",{start:"top 85%",once:true,onEnter:function(b){gsap.to(b,{opacity:1,y:0,rotateX:0,duration:.8,stagger:.11,ease:"power2.out"})}});
+  ScrollTrigger.batch(".t-card",{start:"top 88%",once:true,onEnter:function(b){gsap.to(b,{opacity:1,y:0,rotateY:0,duration:.8,stagger:.12,ease:"power2.out"})}});
+  ScrollTrigger.batch([".section-head",".details",".where-card",".care",".about-copy",".portrait"],{start:"top 88%",once:true,onEnter:function(b){gsap.to(b,{opacity:1,y:0,duration:.9,stagger:.1,ease:"power2.out"})}});
+
+  // 4. Pinned 3D timeline cards
+  var cards=gsap.utils.toArray(".tl-card");
+  var mm=gsap.matchMedia();
+  mm.add("(min-width: 901px)",function(){
+    gsap.set(cards,{rotateX:-70,y:120,opacity:0,z:-200});
+    gsap.set(cards[0],{rotateX:0,y:0,opacity:1,z:0});
+    var t=gsap.timeline({scrollTrigger:{trigger:"#tl-pin",start:"top top",end:"+=1600",pin:true,scrub:1,anticipatePin:1}});
+    for(var i=1;i<cards.length;i++){
+      t.to(cards[i-1],{rotateX:55,y:-90,z:-260,opacity:0,duration:1,ease:"power2.inOut"})
+       .to(cards[i],{rotateX:0,y:0,z:0,opacity:1,duration:1,ease:"power2.inOut"},"<.15");
+    }
+    t.to({},{duration:.4});
+  });
+  mm.add("(max-width: 900px)",function(){
+    // Mobile: cards stack vertically and flip up into place on scroll, no pinning
+    gsap.set(cards,{opacity:0,y:50,rotateX:-35,transformPerspective:900});
+    ScrollTrigger.batch(cards,{start:"top 88%",once:true,onEnter:function(bt){gsap.to(bt,{opacity:1,y:0,rotateX:0,duration:.9,stagger:.12,ease:"power2.out"})}});
+  });
+
+  document.getElementById("yr").textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
