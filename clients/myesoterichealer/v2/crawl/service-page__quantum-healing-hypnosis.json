@@ -1,0 +1,231 @@
+{
+ "title": "Quantum Healing Hypnosis | myesoterichealer",
+ "metaDesc": "Experience a transformative journey through past life memories and profound healing. Explore your subconscious mind and uncover hidden aspects of your soul for personal growth and inner peace. Book your session now!",
+ "blocks": [
+  {
+   "tag": "p",
+   "text": "My Esoteric Healer",
+   "section": "comp-m04z7lm6"
+  },
+  {
+   "tag": "p",
+   "text": "Home",
+   "section": "comp-m04z7lm6"
+  },
+  {
+   "tag": "p",
+   "text": "Testimonials",
+   "section": "comp-m04z7lm6"
+  },
+  {
+   "tag": "p",
+   "text": "Blog",
+   "section": "comp-m04z7lm6"
+  },
+  {
+   "tag": "p",
+   "text": "Book Online",
+   "section": "comp-m04z7lm6"
+  },
+  {
+   "tag": "h1",
+   "text": "Quantum Healing Hypnosis",
+   "section": ""
+  },
+  {
+   "tag": "p",
+   "text": "Reconnect with your past lives for deep healing",
+   "section": ""
+  },
+  {
+   "tag": "h2",
+   "text": "Service Description",
+   "section": ""
+  },
+  {
+   "tag": "p",
+   "text": "Experience a transformative journey through past life memories and profound healing. Explore your subconscious mind and uncover hidden aspects of your soul for personal growth and inner peace. Book your session now!",
+   "section": ""
+  },
+  {
+   "tag": "h2",
+   "text": "Contact Details",
+   "section": ""
+  },
+  {
+   "tag": "p",
+   "text": "Gold Coast QLD, Australia",
+   "section": ""
+  },
+  {
+   "tag": "p",
+   "text": "0431964308",
+   "section": ""
+  },
+  {
+   "tag": "p",
+   "text": "marinalezos@protonmail.com",
+   "section": ""
+  },
+  {
+   "tag": "h2",
+   "text": "My Esoteric Healer",
+   "section": "comp-m04z7ln9"
+  },
+  {
+   "tag": "p",
+   "text": "0431964308",
+   "section": "comp-m04z7ln9"
+  },
+  {
+   "tag": "p",
+   "text": "marinalezos@protonmail.com",
+   "section": "comp-m04z7ln9"
+  },
+  {
+   "tag": "p",
+   "text": "Canungra QLD 4275, Australia",
+   "section": "comp-m04z7ln9"
+  }
+ ],
+ "links": [
+  {
+   "text": "Home",
+   "href": "https://www.myesoterichealer.com/",
+   "inNav": true,
+   "inFooter": false
+  },
+  {
+   "text": "Testimonials",
+   "href": "https://www.myesoterichealer.com/testimonials",
+   "inNav": true,
+   "inFooter": false
+  },
+  {
+   "text": "Blog",
+   "href": "https://www.myesoterichealer.com/blog",
+   "inNav": true,
+   "inFooter": false
+  },
+  {
+   "text": "Book Online",
+   "href": "https://www.myesoterichealer.com/book-online",
+   "inNav": true,
+   "inFooter": false
+  },
+  {
+   "text": "Home",
+   "href": "https://www.myesoterichealer.com/",
+   "inNav": true,
+   "inFooter": false
+  },
+  {
+   "text": "Service list",
+   "href": "https://www.myesoterichealer.com/book-online",
+   "inNav": true,
+   "inFooter": false
+  },
+  {
+   "text": "My Esoteric Healer",
+   "href": "https://www.myesoterichealer.com/",
+   "inNav": false,
+   "inFooter": true
+  },
+  {
+   "text": "marinalezos@protonmail.com",
+   "href": "mailto:marinalezos@protonmail.com",
+   "inNav": false,
+   "inFooter": true
+  }
+ ],
+ "buttons": [
+  {
+   "text": "Skip to Main Content",
+   "href": ""
+  },
+  {
+   "text": "Book Now",
+   "href": ""
+  }
+ ],
+ "imgs": [
+  {
+   "src": "https://static.wixstatic.com/media/625c4c_b6bdc8960a2141f0873a377fced53d95~mv2.jpg/v1/fill/w_665,h_385,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/625c4c_b6bdc8960a2141f0873a377fced53d95~mv2.jpg",
+   "srcset": "",
+   "alt": "Quote from Dolores Cannon",
+   "w": 665,
+   "h": 385,
+   "top": 853,
+   "natural": "665x385"
+  }
+ ],
+ "bgs": [],
+ "wixImgs": [
+  "{\"containerId\":\"comp-m04z7lnm\",\"alignType\":\"center\",\"displayMode\":\"fill\",\"targetWidth\":491,\"targetHeight\":385,\"isLQIP\":true,\"encoding\":\"AVIF\",\"imageData\":{\"width\":960,\"height\":780,\"uri\":\"625c4c_b6bdc8960a2141f0873a377fced53d95~mv2.jpg\",\"name\":\"\",\"displayMode\":\"fill\",\"hasAnimation\":false}}"
+ ],
+ "forms": [
+  {
+   "action": "https://www.myesoterichealer.com/search",
+   "fields": [
+    {
+     "type": "search",
+     "name": "q",
+     "placeholder": "Search...",
+     "label": "Search..."
+    },
+    {
+     "type": "submit",
+     "name": "",
+     "placeholder": "",
+     "label": ""
+    }
+   ]
+  }
+ ],
+ "inputsOutsideForms": [],
+ "iframes": [],
+ "sections": [
+  {
+   "id": "comp-m04z7lm6",
+   "top": 2,
+   "h": 49,
+   "text": "My Esoteric Healer\n\nHome\n\nTestimonials\n\nBlog\n\nBook Online"
+  },
+  {
+   "id": "comp-m04zcdxz1",
+   "top": 62,
+   "h": 791,
+   "text": "Quantum Healing Hypnosis\n\nReconnect with your past lives for deep healing\n\n5 hr\n5 hr\n350 Australian dollars\n$350\nGold Co"
+  },
+  {
+   "id": "",
+   "top": 62,
+   "h": 789,
+   "text": "Quantum Healing Hypnosis\n\nReconnect with your past lives for deep healing\n\n5 hr\n5 hr\n350 Australian dollars\n$350\nGold Co"
+  },
+  {
+   "id": "comp-m04z7ln9",
+   "top": 853,
+   "h": 385,
+   "text": "My Esoteric Healer\n\n0431964308\n\nmarinalezos@protonmail.com\n\nCanungra QLD 4275, Australia"
+  }
+ ],
+ "colorCount": {
+  "rgb(17, 109, 255)": 1,
+  "bg rgb(255, 255, 255)": 2,
+  "bg rgb(0, 0, 0)": 3,
+  "rgb(231, 223, 211)": 21,
+  "rgb(0, 0, 0)": 2,
+  "bg rgb(104, 73, 56)": 2
+ },
+ "fontCount": {
+  "Helvetica, Arial, メイリオ, meiryo, \"ヒラギノ角ゴ pro w3\", \"hiragino kaku gothic pro\", sans-serif": 1,
+  "caudex, serif": 22,
+  "Arial, Helvetica, sans-serif": 1
+ },
+ "height": 1272,
+ "url": "https://www.myesoterichealer.com/service-page/quantum-healing-hypnosis",
+ "finalUrl": "https://www.myesoterichealer.com/service-page/quantum-healing-hypnosis",
+ "errors": [],
+ "slug": "service-page__quantum-healing-hypnosis"
+}
