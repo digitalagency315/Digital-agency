@@ -14,11 +14,19 @@
 
 // ====== SETTINGS (yahan apne hisaab se badlo) ======
 const CONFIG = {
+  // MODE:
+  //  'LINK' = API ki zarurat nahi. Har nayi lead ke aage "WA Link" ban jata hai.
+  //           Click karo -> phone/laptop ka WhatsApp khulega, message ready -> Send dabao.
+  //  'API'  = Bilkul automatic (Meta WhatsApp Cloud API + approved template chahiye).
+  MODE: 'LINK',
+  LINK_HEADER: 'WA Link',
+  // LINK mode ka message. {name} ki jagah lead ka naam aayega.
+  MESSAGE_TEXT: 'Hi {name}, thanks for your interest! Aapki trading requirement ke baare me baat karne ke liye kab free ho?',
   SHEET_NAME: 'Sheet1',          // leads wali tab ka naam
-  NAME_HEADER: 'Name',           // naam wale column ka heading
-  PHONE_HEADER: 'Phone',         // phone wale column ka heading
+  NAME_HEADER: 'full_name',      // naam wale column ka heading (Meta lead form)
+  PHONE_HEADER: 'phone_number',  // phone wale column ka heading (format: p:+971...)
   STATUS_HEADER: 'WA Status',    // script khud bana degi agar nahi hai
-  DEFAULT_COUNTRY_CODE: '91',    // 10 digit number ke aage lagega
+  DEFAULT_COUNTRY_CODE: '91',    // sirf tab lagega jab number me + / country code na ho aur 10 digit ho
   TEMPLATE_NAME: 'lead_welcome', // Meta me approved template ka naam
   TEMPLATE_LANG: 'en',           // template ki language code (jaise en, hi, en_US)
   TEMPLATE_USES_NAME: true,      // template me {{1}} = lead ka naam ho to true
@@ -40,7 +48,7 @@ function onOpen() {
 
 /** Ek baar chalao: triggers lagata hai + settings check karta hai. */
 function setup() {
-  checkSecrets_();
+  if (CONFIG.MODE === 'API') checkSecrets_();
   removeTriggers();
   const ss = SpreadsheetApp.getActive();
 
@@ -51,8 +59,15 @@ function setup() {
   // 3) Backup: har 1 minute check (Meta/Zapier/API se aayi leads ke liye)
   ScriptApp.newTrigger('processNewLeads').timeBased().everyMinutes(1).create();
 
-  getStatusCol_(getSheet_());
-  toast_('Setup ho gaya ✅ Ab nayi leads ko WhatsApp apne aap jayega.');
+  if (CONFIG.MODE === 'API') {
+    // API mode me purani leads ko apne aap message na chala jaye
+    const marked = markExistingAsOld_();
+    toast_('Setup ho gaya ✅ ' + marked + ' purani leads OLD mark ki. Ab sirf nayi leads ko WhatsApp jayega.');
+  } else {
+    // LINK mode me kuch apne aap nahi jaata, isliye sab leads ke link bana do
+    processNewLeads();
+    toast_('Setup ho gaya ✅ Har lead ke aage "📲 Send" link ban gaya. Click karo aur Send dabao.');
+  }
 }
 
 /** Saare triggers hata deta hai (automation band). */
@@ -94,10 +109,20 @@ function processNewLeads() {
         continue;
       }
 
+      const name = nameCol >= 0 ? cleanName_(row[nameCol]) : '';
+
+      if (CONFIG.MODE !== 'API') {
+        const text = CONFIG.MESSAGE_TEXT.replace(/\{name\}/g, name || 'there');
+        const url = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(text);
+        sheet.getRange(rowNum, getCol_(sheet, CONFIG.LINK_HEADER))
+          .setFormula('=HYPERLINK("' + url.replace(/"/g, '""') + '","📲 Send")');
+        statusCell.setValue('LINK READY');
+        continue;
+      }
+
       statusCell.setValue('SENDING...');
       SpreadsheetApp.flush();
 
-      const name = nameCol >= 0 ? String(row[nameCol] || '').trim() : '';
       const result = sendTemplate_(phone, name || 'there');
       statusCell.setValue(result.ok
         ? 'SENT ' + Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'dd-MM-yyyy HH:mm')
@@ -159,11 +184,42 @@ function sendTemplate_(phone, name) {
   return { ok: false, error: msg.slice(0, 200) };
 }
 
+/** "p:+971541714813" -> "971541714813". Galat number -> "" */
 function normalizePhone_(raw) {
-  let d = String(raw).replace(/\D/g, '');
-  d = d.replace(/^0+/, '');
-  if (d.length === 10) d = CONFIG.DEFAULT_COUNTRY_CODE + d;
-  return d.length >= 11 && d.length <= 15 ? d : '';
+  const s = String(raw).replace(/^p:/i, '').trim();
+  const hasCountryCode = /^(\+|00)/.test(s);
+  let d = s.replace(/\D/g, '');
+  if (s.indexOf('00') === 0) d = d.slice(2);
+  if (!hasCountryCode) {
+    d = d.replace(/^0+/, '');
+    if (d.length === 10) d = CONFIG.DEFAULT_COUNTRY_CODE + d;
+  }
+  if (d.length < 11 || d.length > 15) return '';
+  if (/^(\d)\1+$/.test(d.slice(-9))) return ''; // 888888888 jaise fake number
+  return d;
+}
+
+/** Fancy font naam ("𝑇𝑎𝑟𝑎𝑛𝑝𝑟𝑒𝑒𝑡 𝑆𝑖𝑛𝑔ℎ") ko normal karke sirf first name. */
+function cleanName_(raw) {
+  const plain = String(raw || '').normalize('NFKC')
+    .replace(/[^\p{L}\s.'-]/gu, ' ').replace(/\s+/g, ' ').trim();
+  const first = (plain.split(' ')[0] || '').replace(/[.'-]/g, '');
+  if (first.length < 3) return ''; // "S.B." jaise initials -> "there"
+  return first.charAt(0).toUpperCase() + first.slice(1).toLowerCase();
+}
+
+/** Setup ke time jo leads pehle se hain unko OLD mark karo, taaki unko message na jaye. */
+function markExistingAsOld_() {
+  const sheet = getSheet_();
+  const statusCol = getStatusCol_(sheet);
+  const lastRow = sheet.getLastRow();
+  if (lastRow < 2) return 0;
+  const range = sheet.getRange(2, statusCol, lastRow - 1, 1);
+  const vals = range.getValues();
+  let n = 0;
+  vals.forEach(function (r) { if (!String(r[0]).trim()) { r[0] = 'OLD'; n++; } });
+  range.setValues(vals);
+  return n;
 }
 
 function getSheet_() {
@@ -183,11 +239,16 @@ function findCol_(headers, name) {
 
 /** Status column dhoondo, na ho to aakhir me bana do. Returns 1-based index. */
 function getStatusCol_(sheet) {
+  return getCol_(sheet, CONFIG.STATUS_HEADER);
+}
+
+/** Koi bhi column heading se dhoondo, na ho to aakhir me bana do. Returns 1-based. */
+function getCol_(sheet, header) {
   const headers = getHeaders_(sheet);
-  const idx = findCol_(headers, CONFIG.STATUS_HEADER);
+  const idx = findCol_(headers, header);
   if (idx >= 0) return idx + 1;
   const col = sheet.getLastColumn() + 1;
-  sheet.getRange(1, col).setValue(CONFIG.STATUS_HEADER);
+  sheet.getRange(1, col).setValue(header);
   return col;
 }
 

@@ -4,7 +4,16 @@ Sheet me nayi lead aate hi usko WhatsApp pe message chala jayega.
 Sab free hai (Google Apps Script + Meta WhatsApp Cloud API).
 Meta sirf har message ka chhota charge leta hai.
 
-## Kya chahiye
+## 2 tarike (Code.gs me `MODE` se chuno)
+- **LINK (default, aasaan):** Koi API nahi chahiye. Har nayi lead ke aage `📲 Send` link ban jata hai.
+  Phone ya laptop pe click karo → aapka apna WhatsApp khulega, message pehle se likha hoga → **Send** dabao.
+  Sirf Step 2 aur Step 4 karo (Step 1, 3 skip).
+- **API (poora automatic):** Bina click ke message apne aap jata hai. Neeche ke saare steps chahiye.
+
+Yeh Meta lead form wali sheet ke liye set hai (`full_name`, `phone_number` jisme `p:+971...` format hota hai).
+Fancy font wale naam (𝑇𝑎𝑟𝑎𝑛) normal ho jaate hain, aur `888888888` jaise fake number pe ERROR likh jata hai.
+
+## Kya chahiye (API mode)
 1. Leads wali Google Sheet. Pehli row me headings: `Name`, `Phone`.
 2. Meta WhatsApp Business account (developers.facebook.com → WhatsApp).
 3. Ek **approved template** (jaise `lead_welcome`).
