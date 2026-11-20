@@ -14,7 +14,7 @@ Yeh Meta lead form wali sheet ke liye set hai (`full_name`, `phone_number` jisme
 Fancy font wale naam (𝑇𝑎𝑟𝑎𝑛) normal ho jaate hain, aur `888888888` jaise fake number pe ERROR likh jata hai.
 
 ## Kya chahiye (API mode)
-1. Leads wali Google Sheet. Pehli row me headings: `Name`, `Phone`.
+1. Leads wali Google Sheet (Meta lead form wali, headings `full_name`, `phone_number`).
 2. Meta WhatsApp Business account (developers.facebook.com → WhatsApp).
 3. Ek **approved template** (jaise `lead_welcome`).
    Example text: `Hi {{1}}, thanks for your interest! Hum jaldi aapse baat karenge.`
